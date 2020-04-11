@@ -15,13 +15,12 @@ class Solution:
             fast = fast.next.next
 
     # reverse the second half in-place
-        prev= None 
-        cur = slow
-        while cur:
-            nxt = cur.next
-            cur.next = prev
-            prev = cur
-            cur = nxt
+        prev= None
+        while slow:
+            nxt = slow.next
+            slow.next = prev
+            prev = slow
+            slow = nxt
     
     # Merge in-place; Note : the last node of "first" and "second" are the same
         first = head
