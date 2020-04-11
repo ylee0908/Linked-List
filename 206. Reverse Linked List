@@ -25,3 +25,12 @@ def reverseList(head):
         prev = curr
         curr = temp
      return prev
+     
+ def reverseList(head):
+    node = Nond
+    while head:
+        nxt = head.next
+        head.next = node
+        node = head
+        head = nxt
+    return node
