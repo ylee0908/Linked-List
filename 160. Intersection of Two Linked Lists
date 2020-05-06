@@ -5,7 +5,7 @@
 #         self.next = None
 
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:Time O(m+n) space O(1)
         if headA is None or headB is None:
             return None
         
@@ -22,3 +22,16 @@ class Solution:
             else:
                 b = headA
         return a
+        
+        
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:#TimeO(m+n) SpaceO(n)
+        seen = set()
+        a= headA
+        b= headB
+        while a:
+            seen.add(a)
+            a = a.next
+        while b:
+            if b in seen:
+                return b
+            b = b.next
