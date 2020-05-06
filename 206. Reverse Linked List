@@ -16,21 +16,14 @@ class Solution(object):
 #iterative
 
 def reverseList(head):
-    prev = None
-    curr = head
-    
-    while curr:
-        temp = curr.next
-        curr.next = prev
-        prev = curr
-        curr = temp
-     return prev
+     prev = None
+        
+        while head:
+            nxt = head.next
+            cur = head
+            cur.next = prev
+            head = nxt
+            prev = cur
+        return prev
      
- def reverseList(head):
-    node = Nond
-    while head:
-        nxt = head.next
-        head.next = node
-        node = head
-        head = nxt
-    return node
+ 
