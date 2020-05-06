@@ -1,5 +1,5 @@
 class Solution(object):
-    def reverseList(self, head):
+    def reverseList(self, head): O(n)time and O(n)space due to stack
         """
         :type head: ListNode
         :rtype: ListNode
@@ -13,7 +13,7 @@ class Solution(object):
         head.next = None
         return p
     
-#iterative
+#iterative O(n)time, O(1)space
 
 def reverseList(head):
         prev = None
