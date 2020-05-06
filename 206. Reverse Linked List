@@ -16,14 +16,13 @@ class Solution(object):
 #iterative
 
 def reverseList(head):
-     prev = None
-        
-        while head:
-            nxt = head.next
-            cur = head
+        prev = None
+        cur = head
+         
+        while cur:
+            nxt = cur.next
             cur.next = prev
-            head = nxt
             prev = cur
+            cur = nxt
         return prev
-     
  
