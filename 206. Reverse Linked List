@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: ListNode
         """
         if not head:
-            return None
+            return head
         if not head.next:
             return head
         p = self.reverseList(head.next)
