@@ -1,23 +1,17 @@
 142. Linked List Cycle II
 Medium
 class Solution:
-    # @param head, a ListNode
-    # @return a list node
-    def detectCycle(self, head):
-        try:
-            fast = head.next
-            slow = head
-            while fast is not slow:
-                fast = fast.next.next
-                slow = slow.next
-        except:
-            # if there is an exception, we reach the end and there is no cycle
+    def detectCycle(self, head: ListNode) -> ListNode:
+        if head is None or head.next is None:
             return None
-
-        # since fast starts at head.next, we need to move slow one step forward
-        slow = slow.next
-        while head is not slow:
-            head = head.next
+        
+        slow = fast = head
+        while fast.next != None and fast.next.next != None:
             slow = slow.next
-
-        return head
+            fast = fast.next.next
+            if slow == fast:
+                while slow != head:
+                    slow = slow.next
+                    head = head.next
+                return slow
+        return None
