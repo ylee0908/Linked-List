@@ -1,5 +1,5 @@
 def sortList(self, head: ListNode) -> ListNode:
-        
+        # Time O(nlogn), Space O(1)
         if not head or not head.next:
             return head
         # divide list into two parts
