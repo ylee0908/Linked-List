@@ -1,17 +1,18 @@
 class Solution(object):
-    def reverseList(self, head): O(n)time and O(n)space due to stack
+    def reverseList(self, head): O(n)time and O(n)space due to call stack
         """
         :type head: ListNode
         :rtype: ListNode
         """
+        #base case
         if not head:
             return head
         if not head.next:
             return head
-        p = self.reverseList(head.next)
+        reverselist_head = self.reverseList(head.next)
         head.next.next = head
         head.next = None
-        return p
+        return reverselist_head
     
 #iterative O(n)time, O(1)space
 
