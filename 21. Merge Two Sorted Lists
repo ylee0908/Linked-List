@@ -16,7 +16,7 @@ class Solution(object):
 
          
         
-        # iteratively
+        # iteratively Time O(m+n) Space O(1)- only created a dummy node
     def mergeTwoLists(self, l1, l2):
         dummy = cur = ListNode(0)
         while l1 and l2:
